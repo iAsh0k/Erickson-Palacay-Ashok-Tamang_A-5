@@ -1,0 +1,18 @@
+{
+  "name": "fee",
+  "version": "1.0.0",
+  "scripts": {
+    "runserver": "lite-server --baseDir=\"public\"",
+    "goatedteam": "sass --watch src/scss:public/assets/css",
+    "start": "concurrently \"npm run runserver\" \"npm run goatedteam\""
+  },
+  "author": "Erickson Palacay & Ashok Tamang",
+  "license": "private",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "lite-server": "^2.6.1",
+    "sass": "^1.81.0"
+  }
+}

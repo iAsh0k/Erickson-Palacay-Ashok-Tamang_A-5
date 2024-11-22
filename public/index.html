@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Assingment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row content-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <h4 class="text-white">Dashboard Kit</h4>
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-house-door-fill me-2"></i>Overview</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-ticket-detailed me-2"></i>Tickets</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-lightbulb-fill me-2"></i>Ideas</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-people-fill me-2"></i>Contacts</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-person-fill me-2"></i>Agents</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-file-earmark-text-fill me-2"></i>Articles</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-gear-fill me-2"></i>Settings</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link text-light"
+                ><i class="bi bi-card-checklist me-2"></i>Subscription</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10 main-content bg-light">
+          <!-- Header -->
+          <div
+            class="d-flex justify-content-between align-items-center py-3 border-bottom"
+          >
+            <h1 class="h4 mb-0">Overview</h1>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-search me-2"></i><i class="bi bi-bell me-3"></i>
+              <input
+                type="search"
+                class="form-control me-3"
+                placeholder="Search"
+              />
+              <img
+                src="./assets/images/boy.png"
+                width="40px"
+                alt="User"
+                class="rounded-circle"
+              />
+            </div>
+          </div>
+
+          <!-- Top Stats -->
+          <div class="row text-center py-4 g-3">
+            <div class="col-md-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5>Unresolved</h5>
+                  <h2>60</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5>Overdue</h5>
+                  <h2>16</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5>Open</h5>
+                  <h2>43</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5>On hold</h5>
+                  <h2>64</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Chart and Stats -->
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Today's trends</h5>
+                  <p class="text-muted">as of 25 May 2019, 09:41 PM</p>
+
+                  <!-- Placeholder for chart -->
+                  <div
+                    class="chart-container"
+                    style="position: relative; height: 250px; width: 100%"
+                  >
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Resolved</h5>
+                  <h2>449</h2>
+                </div>
+              </div>
+              <div class="card shadow-sm mt-3">
+                <div class="card-body">
+                  <h5 class="card-title">Received</h5>
+                  <h2>426</h2>
+                </div>
+              </div>
+              <div class="card shadow-sm mt-3">
+                <div class="card-body">
+                  <h5 class="card-title">Avg first response</h5>
+                  <h2>33m</h2>
+                </div>
+              </div>
+              <div class="card shadow-sm mt-3">
+                <div class="card-body">
+                  <h5 class="card-title">Resolution within SLA</h5>
+                  <h2>94%</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable Content Section -->
+          <div class="row mt-4 overview-content">
+            <div class="col-md-6">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Unresolved tickets</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      Waiting on Feature Request
+                      <span class="badge bg-secondary float-end">4238</span>
+                    </li>
+                    <li class="list-group-item">
+                      Awaiting Customer Response
+                      <span class="badge bg-secondary float-end">1005</span>
+                    </li>
+                    <li class="list-group-item">
+                      Awaiting Developer Fix
+                      <span class="badge bg-secondary float-end">914</span>
+                    </li>
+                    <li class="list-group-item">
+                      Pending
+                      <span class="badge bg-secondary float-end">281</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Tasks</h5>
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Finish ticket update
+                      <span class="badge bg-danger">URGENT</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Create new ticket example
+                      <span class="badge bg-success">NEW</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Update ticket report
+                      <span class="badge bg-secondary">DEFAULT</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Chart.js Configuration -->
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
+          datasets: [
+            {
+              label: "Tickets",
+              data: [65, 59, 80, 81, 56, 55],
+              borderColor: "rgba(75, 192, 192, 1)",
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderWidth: 2,
+              tension: 0.4, // Smooth curve for line
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "",
+            },
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: "Months",
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: "",
+              },
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

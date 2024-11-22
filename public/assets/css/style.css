@@ -1,0 +1,130 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background-color: #343a40;
+  color: white;
+  z-index: 100;
+  overflow-y: auto;
+}
+.sidebar .nav-link {
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.sidebar .nav-link:hover {
+  background-color: #495057;
+}
+.sidebar li {
+  padding-top: 1rem;
+}
+
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  padding: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+.table-stack {
+  table-layout: auto;
+}
+
+@media (max-width: 768px) {
+  .table-stack thead {
+    display: none;
+  }
+
+  .table-stack tbody,
+  .table-stack tr,
+  .table-stack td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-stack td {
+    padding: 1rem;
+    border: 0;
+    text-align: left;
+  }
+
+  .table-stack td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+  }
+
+  .table-stack td[data-label="Actions"] {
+    text-align: right;
+  }
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
